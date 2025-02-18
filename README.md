@@ -24,6 +24,8 @@ The MathClean benchmark consists of 2,000 correct questions and 2,000 erroneous 
 
 MathClean is divided into 4 categories:Answer Error Detection, Answer Error Type Detection, Question Error Detection, and Question Error Type Detection.
 
+The four types data of benchmark are placed under the `check_correct_answer/data`, `check_type_answer/data`, `check_correct_question/data` and `check_type_question/data` directory.
+
 ### Data Format
 [string] The type of question: "multi_choice" or "free_form"
 check_correct_answer and check_type_answer
