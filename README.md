@@ -46,7 +46,7 @@ check_correct_question and check_type_question
 ```
 
 ### Example
-check_correct_answer
+#### check_correct_answer
 ```python
   {
         "question": "Consider a scenario where a rectangular box has dimensions of 3 by 4 by 5 units. Now, imagine that there is a special event where the box expands by 1 unit in all directions, but this expansion happens only 8 times a year. For the rest of the year, the box remains in its original size. Calculate the total volume of the set of points that are inside or within one unit of the box for the entire year, expressed as $\\displaystyle {{m+n\\pi}\\over p}$, where $m$, $n$, and $p$ are positive integers, and $n$ and $p$ are relatively prime. Find $m+n+p$.",
@@ -55,14 +55,14 @@ check_correct_answer
         "type": "mathematical method"
     },
 ```
-check_correct_question
+#### check_correct_question
 ```python
     {
         "output": "A circle has a radius of 3 inches. The product of this radius and the circumference of the circle is equal to the circle's area. What is the length of the circumference of the circle, in inches?",
         "type": "contradictions"
     },
 ```
-check_type_answer
+#### check_type_answer
 
 ```python
     {
@@ -73,7 +73,7 @@ check_type_answer
     },
 ```
 
-check_type_question
+#### check_type_question
 
 ```python
     {
@@ -88,27 +88,20 @@ check_type_question
 
 requirement
 ```python
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Model Inference
 
-API
+We support three types of model inference: API, local model inference, and PRMs inference.
+
+#### API
 
 ```python
-    cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
+cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
 
-    python cot_GPT.py --model gpt-4o --dataset math
-    python cot_GPT.py --model gpt-4o --dataset gsm8k
-```
-
-Local Model
-
-```python
-    cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
-
-    CUDA_VISIBLE_DEVICES=0,1 python cot.py --model Llama-3.1-8B-Instruct --dataset gsm8k
-    CUDA_VISIBLE_DEVICES=3,4 python cot.py --model Llama-3.1-8B-Instruct --dataset math
+python cot_GPT.py --model gpt-4o --dataset math
+python cot_GPT.py --model gpt-4o --dataset gsm8k
 ```
 
 The model generates text and we extracts the final answer.
@@ -121,6 +114,53 @@ The model generates text and we extracts the final answer.
 ```
 
 The result is saved in `output/cot_{args.dataset}_GPT_{args.model}.json`
+
+#### Local Model
+
+```python
+cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
+
+CUDA_VISIBLE_DEVICES=0,1 python cot.py --model Llama-3.1-8B-Instruct --dataset gsm8k
+CUDA_VISIBLE_DEVICES=3,4 python cot.py --model Llama-3.1-8B-Instruct --dataset math
+```
+
+The model generates text and we extracts the final answer.
+
+```python
+    {
+        "generated_text": [string] The result of model inference,
+        "result": [string] "correct" or "incorrect"
+    },
+```
+
+The result is saved in `output/cot_{args.dataset}_GPT_{args.model}.json`
+
+#### PRM
+
+```python
+cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
+
+CUDA_VISIBLE_DEVICES=1 python cot_shepherd_prm.py --model math-shepherd-mistral-7b-prm --dataset math
+CUDA_VISIBLE_DEVICES=0 python cot_shepherd_prm.py --model math-shepherd-mistral-7b-prm --dataset gsm8k
+
+CUDA_VISIBLE_DEVICES=3 python cot_skywork_prm.py --model Skywork-PRM-7B --dataset math
+CUDA_VISIBLE_DEVICES=1 python cot_skywork_prm.py --model Skywork-PRM-7B --dataset gsm8k
+
+CUDA_VISIBLE_DEVICES=2 python cot_qwen_prm.py --model Qwen2.5-Math-PRM-7B --dataset math
+CUDA_VISIBLE_DEVICES=3 python cot_qwen_prm.py --model Qwen2.5-Math-PRM-7B --dataset gsm8k
+```
+The model generates scores.
+
+```python
+    {
+       "answer": [string] The answer for the problem,,
+        "score": [float] The score of answer
+    },
+```
+
+The preliminary result is saved in `output/cot_prm_{args.model}_{args.dataset}.json`
+
+Then we need to run `score2result.py` to get the final result.
 
 ### Evaluation
 
