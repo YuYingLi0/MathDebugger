@@ -30,7 +30,7 @@ MathClean benchmark is designed to evaluate the effectiveness of mathematical da
 </p>
 
 <p align="right">
-    <img src="question_dataset/question_dataset" width="20%"> <br>
+    <img src="question_dataset/question_dataset" width="10%"> <br>
   distribution of <b>question_dataset</b>.
 </p>
 
