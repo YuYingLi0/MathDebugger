@@ -12,7 +12,7 @@ parser.add_argument('--dataset', required=True, help='Problem type')
 args = parser.parse_args()
 
 # 获取命令行传入的模型名称和问题类型
-model = f"/global_data/sft_intern/lh/huggingface_models/{args.model}"
+model = f"huggingface_models/{args.model}"
 tokenizer = AutoTokenizer.from_pretrained(model)
 # 生成prompts的路径
 with open(f'data/{args.dataset}.json', 'r', encoding='utf-8') as json_file:
