@@ -16,11 +16,24 @@ Code for the Paper ["MathClean: A Benchmark for Synthetic Mathematical Data Clea
 
 ## MathClean
 
-![overview](fig/cover/cover_page.jpg)
+<p align="center">
+    <img src="fig/cover/cover_page.jpg"> <br>
+  overview of <b>MathClean</b>.
+</p>
+
 
 MathClean benchmark is designed to evaluate the effectiveness of mathematical data cleaning models. It was proposed to address the issue of quality contamination caused by incorrect mathematical synthetic data.
 
-![answer_dataset](fig/answer_dataset/answer_dataset.jpg)![question_dataset](fig/question_dataset/question_dataset.jpg)
+<p align="left">
+    <img src="fig/answer_dataset/answer_dataset.jpg" width="40%"> <br>
+  distribution of <b>answer_dataset</b>.
+</p>
+
+<p align="right">
+    <img src="question_dataset/question_dataset" width="40%"> <br>
+  distribution of <b>question_dataset</b>.
+</p>
+
 
 The MathClean benchmark consists of 2,000 correct questions and 2,000 erroneous questions with additional 2,000 correct and erroneous answers sourced from augmented data based on GSM8K and MATH. Moreover, we also annotate error types for each question or answer, since it can assess whether models can correctly identify the error categories for future improvements.
 
