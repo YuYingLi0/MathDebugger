@@ -44,8 +44,7 @@ MathClean is divided into 4 categories:Answer Error Detection, Answer Error Type
 The four types data of benchmark are placed under the `check_correct_answer/data`, `check_type_answer/data`, `check_correct_question/data` and `check_type_question/data` directory.
 
 ### Data Format
-[string] The type of question: "multi_choice" or "free_form"
-check_correct_answer and check_type_answer
+#### check_correct_answer and check_type_answer
 ```python
   {
         "question": [string] The question text,
@@ -54,7 +53,7 @@ check_correct_answer and check_type_answer
         "type": [string] "mathematical method" or "mathematical method" or null
     },
 ```
-check_correct_question and check_type_question
+#### check_correct_question and check_type_question
 ```python
     {
         "output": [string] The question text,
@@ -63,7 +62,7 @@ check_correct_question and check_type_question
 ```
 
 ### Example
-#### check_correct_answer
+#### check_correct_answer and check_type_answer
 ```python
   {
         "question": "Consider a scenario where a rectangular box has dimensions of 3 by 4 by 5 units. Now, imagine that there is a special event where the box expands by 1 unit in all directions, but this expansion happens only 8 times a year. For the rest of the year, the box remains in its original size. Calculate the total volume of the set of points that are inside or within one unit of the box for the entire year, expressed as $\\displaystyle {{m+n\\pi}\\over p}$, where $m$, $n$, and $p$ are positive integers, and $n$ and $p$ are relatively prime. Find $m+n+p$.",
@@ -72,30 +71,11 @@ check_correct_question and check_type_question
         "type": "mathematical method"
     },
 ```
-#### check_correct_question
+#### check_correct_question and check_type_question
 ```python
     {
         "output": "A circle has a radius of 3 inches. The product of this radius and the circumference of the circle is equal to the circle's area. What is the length of the circumference of the circle, in inches?",
         "type": "contradictions"
-    },
-```
-#### check_type_answer
-
-```python
-    {
-        "question": "One piece of string is 2.5 inches long and another piece of string is 5.5 inches long. If a third piece of string is added that is 3.5 inches long, what is the average length, in inches, of these three pieces of string?",
-        "answer": "I'd be happy to help you with that!\n\nTo solve this problem, we'll follow a step-by-step approach:\n\n1. Determine the total length of the three pieces of string: We have the lengths of the first two pieces: 2.5 inches and 5.5 inches. For the third piece, we're given a length of 3.5 inches. To find the total length, we add these values together:\n\n2.5 + 5.5 + 3.5 = 11.5 inches\n\n2. Find the average length: To find the average length, we divide the total length by the number of pieces. Since we have three pieces, we divide the total length by 3:\n\n11.5 \u00f7 3 = 3.83 inches\n\nSo, the average length of the three pieces of string is approximately 3.83 inches.\n\nTherefore, the answer is: \"3.83 inches\"",
-        "extent": "not obvious error",
-        "type": "logic error"
-    },
-```
-
-#### check_type_question
-
-```python
-    {
-        "output": "At Beaumont High School, there are 12 players on the baseball team. All 12 players are taking at least one of biology or chemistry. If 7 players are taking biology and 2.5 players are taking both sciences, how many players are taking chemistry?",
-        "type": "unrealistic"
     },
 ```
 
