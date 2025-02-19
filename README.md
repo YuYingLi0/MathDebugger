@@ -18,7 +18,7 @@ Code for the Paper ["MathClean: A Benchmark for Synthetic Mathematical Data Clea
 
 <p align="center">
     <img src="fig/cover/cover_page.jpg"> <br>
-  overview of <b>MathClean</b>.
+  Overview of <b>MathClean</b>.
 </p>
 
 
@@ -26,12 +26,12 @@ MathClean benchmark is designed to evaluate the effectiveness of mathematical da
 
 <p align="center">
     <img src="fig/answer_dataset/answer_dataset.jpg" width="40%"> <br>
-  distribution of <b>answer_dataset</b>.
+  Distribution of <b>answer_dataset</b>
 </p>
 
 <p align="center">
     <img src="fig/question_dataset/question_dataset.jpg" width="40%"> <br>
-  distribution of <b>question_dataset</b>.
+  Distribution of <b>question_dataset</b>
 </p>
 
 
