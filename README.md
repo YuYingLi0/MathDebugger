@@ -50,7 +50,7 @@ The four types data of benchmark are placed under the `check_correct_answer/data
         "question": [string] The question text,
         "answer": [string] The correct answer for the problem,
         "extent": [string] How obvious the error is, "obvious error" or "not obvious error" or "no error",
-        "type": [string] "mathematical method" or "mathematical method" or null
+        "type": [string] "logic error" or "expression error" or "computing error" or null
     },
 ```
 #### check_correct_question and check_type_question
