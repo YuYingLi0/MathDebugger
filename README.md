@@ -26,16 +26,18 @@ Code for the paper:
 
 MathClean benchmark is designed to evaluate the effectiveness of mathematical data cleaning models. It was proposed to address the issue of quality contamination caused by incorrect mathematical synthetic data.
 
-<p align="center">
-    <img src="fig/answer_dataset/answer_dataset.jpg" width="40%"> <br>
-  Distribution of <b>answer_dataset</b>
-</p>
-
-<p align="center">
-    <img src="fig/question_dataset/question_dataset.jpg" width="40%"> <br>
-  Distribution of <b>question_dataset</b>
-</p>
-
+<table>
+  <tr>
+    <td align="center">
+      <img src="fig/answer_dataset/answer_dataset.jpg" width="300"><br>
+      <b>Distribution of answer_dataset</b>
+    </td>
+    <td align="center">
+      <img src="fig/question_dataset/question_dataset.jpg" width="300"><br>
+      <b>Distribution of question_dataset</b>
+    </td>
+  </tr>
+</table>
 
 The MathClean benchmark consists of 2,000 correct questions and 2,000 erroneous questions with additional 2,000 correct and erroneous answers sourced from augmented data based on GSM8K and MATH. Moreover, we also annotate error types for each question or answer, since it can assess whether models can correctly identify the error categories for future improvements.
 
@@ -170,3 +172,17 @@ Modify the `predictions_file_path` for the model output path you want to evaluat
 
     python evaluation.py
 ```
+### Citation
+
+If you use this repository or dataset in your work, please cite the following paper:
+
+```bibtex
+@misc{liang2025mathcleanbenchmarksyntheticmathematical,
+  title={MathClean: A Benchmark for Synthetic Mathematical Data Cleaning}, 
+  author={Hao Liang and Meiyi Qiang and Yuying Li and Zefeng He and Yongzhen Guo and Zhengzhou Zhu and Wentao Zhang and Bin Cui},
+  year={2025},
+  eprint={2502.19058},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2502.19058}, 
+}
