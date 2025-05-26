@@ -1,5 +1,7 @@
 # MathClean
-Code for the Paper ["MathClean: A Benchmark for Synthetic Mathematical Data Cleaning"]()
+Code for the paper:  
+📄 [MathClean: A Benchmark for Synthetic Mathematical Data Cleaning](https://arxiv.org/abs/2502.19058)  
+📦 [Dataset on Hugging Face](https://huggingface.co/datasets/Meiyi-Q03/MathClean)
 
 ## Outlines
 - [News](#News)
