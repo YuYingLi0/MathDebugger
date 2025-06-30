@@ -176,17 +176,3 @@ Modify the `predictions_file_path` for the model output path you want to evaluat
 
     python evaluation.py
 ```
-### Citation
-
-If you use this repository or dataset in your work, please cite the following paper:
-
-```bibtex
-@misc{liang2025mathcleanbenchmarksyntheticmathematical,
-  title={MathClean: A Benchmark for Synthetic Mathematical Data Cleaning}, 
-  author={Hao Liang and Meiyi Qiang and Yuying Li and Zefeng He and Yongzhen Guo and Zhengzhou Zhu and Wentao Zhang and Bin Cui},
-  year={2025},
-  eprint={2502.19058},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2502.19058}, 
-}
