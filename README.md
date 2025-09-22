@@ -1,6 +1,6 @@
 ## Outlines
 - [News](#News)
-- [MathClean](#MathClean)
+- [MathDebugger](#MathDebugger)
 - [Data Format and Examples](#Data_Format_and_Examples)
   - [Data Format](#Data_Format)
   - [Example](#Example)
@@ -11,15 +11,15 @@
 
 ## News
 
-## MathClean
+## MathDebugger
 
 <p align="center">
     <img src="fig/cover/cover_page.jpg"> <br>
-  Overview of <b>MathClean</b>.
+  Overview of <b>MathDebugger</b>.
 </p>
 
 
-MathClean benchmark is designed to evaluate the effectiveness of mathematical data cleaning models. It was proposed to address the issue of quality contamination caused by incorrect mathematical synthetic data.
+MathDebugger benchmark is designed to evaluate the effectiveness of mathematical data cleaning models. It was proposed to address the issue of quality contamination caused by incorrect mathematical synthetic data.
 
 <div align="center">
 
@@ -38,11 +38,11 @@ MathClean benchmark is designed to evaluate the effectiveness of mathematical da
 
 </div>
 
-The MathClean benchmark consists of 2,000 correct questions and 2,000 erroneous questions with additional 2,000 correct and erroneous answers sourced from augmented data based on GSM8K and MATH. Moreover, we also annotate error types for each question or answer, since it can assess whether models can correctly identify the error categories for future improvements.
+The MathDebugger benchmark consists of 2,000 correct questions and 2,000 erroneous questions with additional 2,000 correct and erroneous answers sourced from augmented data based on GSM8K and MATH. Moreover, we also annotate error types for each question or answer, since it can assess whether models can correctly identify the error categories for future improvements.
 
 ## Data Format and Examples
 
-MathClean is divided into 4 categories:Answer Error Detection, Answer Error Type Detection, Question Error Detection, and Question Error Type Detection.
+MathDebugger is divided into 4 categories:Answer Error Detection, Answer Error Type Detection, Question Error Detection, and Question Error Type Detection.
 
 The four types data of benchmark are placed under the `check_correct_answer/data`, `check_type_answer/data`, `check_correct_question/data` and `check_type_question/data` directory.
 
