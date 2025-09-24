@@ -100,8 +100,8 @@ We support three types of model inference: API, local model inference, and PRMs 
 ```python
 cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
 
-python cot_GPT.py --model gpt-4o --dataset math
-python cot_GPT.py --model gpt-4o --dataset gsm8k
+python cot_GPT.py --model gpt-4o --dataset challenging
+python cot_GPT.py --model gpt-4o --dataset simple
 ```
 
 The model generates text and we extracts the final answer.
@@ -120,8 +120,8 @@ The result is saved in `output/cot_{args.dataset}_GPT_{args.model}.json`
 ```python
 cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
 
-CUDA_VISIBLE_DEVICES=0,1 python cot.py --model Llama-3.1-8B-Instruct --dataset gsm8k
-CUDA_VISIBLE_DEVICES=3,4 python cot.py --model Llama-3.1-8B-Instruct --dataset math
+CUDA_VISIBLE_DEVICES=0,1 python cot.py --model Llama-3.1-8B-Instruct --dataset simple
+CUDA_VISIBLE_DEVICES=3,4 python cot.py --model Llama-3.1-8B-Instruct --dataset challenging
 ```
 
 The model generates text and we extracts the final answer.
@@ -140,14 +140,14 @@ The result is saved in `output/cot_{args.dataset}_GPT_{args.model}.json`
 ```python
 cd check_correct_answer # check_type_answer, check_correct_question or check_type_question
 
-CUDA_VISIBLE_DEVICES=1 python cot_shepherd_prm.py --model math-shepherd-mistral-7b-prm --dataset math
-CUDA_VISIBLE_DEVICES=0 python cot_shepherd_prm.py --model math-shepherd-mistral-7b-prm --dataset gsm8k
+CUDA_VISIBLE_DEVICES=1 python cot_shepherd_prm.py --model math-shepherd-mistral-7b-prm --dataset challenging
+CUDA_VISIBLE_DEVICES=0 python cot_shepherd_prm.py --model math-shepherd-mistral-7b-prm --dataset simple
 
-CUDA_VISIBLE_DEVICES=3 python cot_skywork_prm.py --model Skywork-PRM-7B --dataset math
-CUDA_VISIBLE_DEVICES=1 python cot_skywork_prm.py --model Skywork-PRM-7B --dataset gsm8k
+CUDA_VISIBLE_DEVICES=3 python cot_skywork_prm.py --model Skywork-PRM-7B --dataset challenging
+CUDA_VISIBLE_DEVICES=1 python cot_skywork_prm.py --model Skywork-PRM-7B --dataset simple
 
-CUDA_VISIBLE_DEVICES=2 python cot_qwen_prm.py --model Qwen2.5-Math-PRM-7B --dataset math
-CUDA_VISIBLE_DEVICES=3 python cot_qwen_prm.py --model Qwen2.5-Math-PRM-7B --dataset gsm8k
+CUDA_VISIBLE_DEVICES=2 python cot_qwen_prm.py --model Qwen2.5-Math-PRM-7B --dataset challenging
+CUDA_VISIBLE_DEVICES=3 python cot_qwen_prm.py --model Qwen2.5-Math-PRM-7B --dataset simple
 ```
 The model generates scores.
 
