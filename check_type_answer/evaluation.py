@@ -2,7 +2,7 @@ import json
 from sklearn.metrics import accuracy_score, f1_score
 import random
 
-labels_file_path = f"check_type_answer/data/gsm8k.json"
+labels_file_path = f"check_type_answer/data/simple.json"
 predictions_file_path = f"check_type_answer/output/cot_gsm8k_GPT_deepseek-reasoner.json"
 predictions = []
 
