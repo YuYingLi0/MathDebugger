@@ -3,7 +3,7 @@ from sklearn.metrics import accuracy_score, f1_score
 import random
 
 labels_file_path = f"check_correct_answer/data/challenging.json"
-predictions_file_path = f"check_correct_answer/output/cot_math_GPT_deepseek-reasoner.json"
+predictions_file_path = f"check_correct_answer/output/cot_challenging_GPT_deepseek-reasoner.json"
 predictions = []
 
 # 标签映射字典
