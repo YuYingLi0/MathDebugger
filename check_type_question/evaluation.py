@@ -2,8 +2,8 @@ import json
 from sklearn.metrics import accuracy_score, f1_score
 import random
 
-labels_file_path = f"lyy/check_type_question/data/math.json"
-predictions_file_path = f"lyy/check_type_question/output/cot_math_GPT_o1-preview.json"
+labels_file_path = f"lyy/check_type_question/data/challenging.json"
+predictions_file_path = f"lyy/check_type_question/output/cot_challenging_GPT_o1-preview.json"
 predictions = []
 
 random.seed(42)
